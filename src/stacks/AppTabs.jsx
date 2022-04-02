@@ -1,4 +1,4 @@
-//import HomeStack from './HomeStack';
+import HomeStack from './HomeStack';
 // import SessionStack from "./SessionStack";
 // import ProfileStack from './ProfileStack';
 import LiveStack from './LiveStack';
@@ -45,7 +45,7 @@ const AppTabs = () => {
                 tabBarLabel:() => {return null},
             })}
         >
-            <Tab.Screen name="HomeStack" options={{ headerShown: false}} component={LiveStack} />
+            <Tab.Screen name="HomeStack" options={{ headerShown: false}} component={HomeStack} />
             <Tab.Screen name="LiveStack" options={{ headerShown: false}} component={LiveStack} />
             <Tab.Screen name="Report" options={{ headerShown: false}} component={LiveStack} />
             <Tab.Screen name="ProfileStack" options={{ headerShown: false}} component={LiveStack} />

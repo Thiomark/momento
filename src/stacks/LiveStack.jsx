@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/live/HomeScreen';
 import FunctionScreen from '../screens/live/FunctionScreen';
 import colors from '../utils/colors';
-// import SettingsScreen from '../screens/live/SettingsScreen';
+import SettingsScreen from '../screens/live/SettingsScreen';
 // import EditSettingsScreen from '../screens/profile/EditProfileSettingsScreen'
 import tw from 'tailwind-react-native-classnames';
 import { View } from 'react-native';
@@ -69,9 +69,9 @@ const LiveStack = () => {
                             <View style={tw`flex flex-row items-center`}>
                                 <IconButton 
                                     event={() => {
-                                        // navigation.navigate('SettingsScreen', {
-                                        //     param: route.params.func
-                                        // });
+                                        navigation.navigate('SettingsScreen', {
+                                            param: route.params.func
+                                        });
                                     }}
                                     name='settings-outline'
                                 />
@@ -81,6 +81,11 @@ const LiveStack = () => {
                 })}
                 name='FunctionScreen' 
                 component={FunctionScreen}
+            />
+            <Stack.Screen 
+                options={() => ({headerTitle: `Settings`})}
+                name='SettingsScreen' 
+                component={SettingsScreen}
             />
         </Stack.Navigator>
     )
